@@ -1,0 +1,196 @@
+/* General reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "MS Sans Serif", sans-serif;
+}
+
+.desktop {
+  width: 100%;
+  height: 100%;
+  background-color: #008080;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Welcome Screen */
+.welcome-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.welcome-window {
+  width: 400px;
+  background-color: #c0c0c0;
+  border: 2px outset #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.welcome-window img {
+  width: 100px;
+  margin: 10px 0;
+}
+
+.welcome-window button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Desktop Icons */
+.desktop-icon {
+  width: 80px;
+  text-align: center;
+  position: absolute;
+  cursor: pointer;
+}
+.desktop-icon img {
+  width: 64px;
+  height: 64px;
+}
+.desktop-icon span {
+  display: block;
+  font-size: 14px;
+  color: white;
+  margin-top: 5px;
+}
+
+/* Windows */
+.window {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 400px;
+  min-width: 200px;
+  max-width: 90%;
+  height: 250px;
+  min-height: 150px;
+  border: 2px outset #fff;
+  background-color: #c0c0c0;
+  display: none;
+  box-sizing: border-box;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.window-titlebar {
+  background: navy;
+  color: white;
+  padding: 2px 5px;
+  cursor: move;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+.window-buttons button {
+  background-color: #c0c0c0;
+  border: 1px solid #fff;
+  margin-left: 2px;
+  font-weight: bold;
+  width: 20px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.window-content {
+  padding: 10px;
+  overflow: auto;
+}
+
+/* Window Resizer */
+.resizer {
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: se-resize;
+  z-index: 10;
+}
+
+/* Taskbar */
+.taskbar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #c0c0c0;
+  border-top: 2px solid #fff;
+  display: flex;
+  align-items: center;
+}
+
+.start-button {
+  width: 100px;
+  height: 100%;
+  background-color: #c0c0c0;
+  border-right: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.start-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+.taskbar-windows {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.taskbar-windows button {
+  margin: 0 2px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#clock {
+  margin-right: 10px;
+}
+
+/* Start Menu */
+.start-menu {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 150px;
+  background-color: #c0c0c0;
+  border: 2px outset #fff;
+  display: none;
+  z-index: 1000;
+}
+
+.start-menu ul {
+  list-style: none;
+  padding: 5px 0;
+  margin: 0;
+}
+
+.start-menu ul li {
+  padding: 5px 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #fff;
+}
+
+.start-menu ul li:hover {
+  background-color: #000080;
+  color: white;
+}

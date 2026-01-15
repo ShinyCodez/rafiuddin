@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rafi Uddin — Windows 95 Desktop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="desktop">
+
+    <!-- Welcome Screen -->
+    <div class="welcome-screen" id="welcomeScreen">
+      <div class="welcome-window">
+        <h3>Welcome to My Windows 95 Website!</h3>
+        <p>
+          Double-click icons to open windows.<br>
+          Drag windows by their title bar.<br>
+          Use the taskbar to switch between open windows.
+        </p>
+        <img src="icons/welcome.png" alt="Welcome">
+        <button id="closeWelcome">Close</button>
+      </div>
+    </div>
+
+    <!-- Desktop Icons -->
+    <div class="desktop-icon" data-window="aboutWindow">
+      <img src="icons/about.png" alt="About">
+      <span>About Me</span>
+    </div>
+
+    <div class="desktop-icon" data-window="projectsWindow">
+      <img src="icons/projects.png" alt="Projects">
+      <span>Projects</span>
+    </div>
+
+    <div class="desktop-icon" data-window="contactWindow">
+      <img src="icons/contact.png" alt="Contact">
+      <span>Contact</span>
+    </div>
+
+    <!-- About Window -->
+    <div class="window" id="aboutWindow">
+      <div class="window-titlebar">
+        <span>About Me</span>
+        <div class="window-buttons">
+          <button class="minimize">_</button>
+          <button class="maximize">☐</button>
+          <button class="close">X</button>
+        </div>
+      </div>
+
+      <div class="window-content" id="aboutContent">
+        <p>
+          Hi! I'm <strong>Rafi Uddin</strong>, a Human Biology major at
+          <strong>Hunter College (CUNY)</strong> pursuing a career in healthcare
+          with a strong interest in research, technology, and STEM education.
+        </p>
+
+        <p>
+          I currently work as an <strong>Undergraduate Research Assistant</strong>
+          at <strong>Weill Cornell Medicine</strong>, where I study myeloid stem
+          cells and immune–nervous system interactions using techniques such as
+          cell culture, RT-qPCR, flow cytometry, ELISA, western blotting, and microscopy.
+        </p>
+
+        <p>
+          My background combines <strong>biology, physics, computer science,
+          and leadership</strong>. I’ve co-authored a machine learning paper
+          submitted to NeurIPS, published a physics textbook, and led large STEM
+          organizations focused on expanding access to science and technology.
+        </p>
+
+        <p>
+          <strong>Technical Skills:</strong><br>
+          HTML, CSS, JavaScript, Python, Machine Learning, Data Analysis,
+          Microsoft Office, Google Workspace
+        </p>
+
+        <p>
+          <strong>Languages:</strong><br>
+          English, Bangla, Sylheti (Fluent)<br>
+          Spanish (Advanced – NYS Seal of Biliteracy)<br>
+          Arabic (Intermediate)
+        </p>
+      </div>
+
+      <div class="resizer"></div>
+    </div>
+
+    <!-- Projects Window -->
+    <div class="window" id="projectsWindow">
+      <div class="window-titlebar">
+        <span>Projects</span>
+        <div class="window-buttons">
+          <button class="minimize">_</button>
+          <button class="maximize">☐</button>
+          <button class="close">X</button>
+        </div>
+      </div>
+
+      <div class="window-content" id="projectsContent">
+        <ul>
+          <li>
+            <strong>Weill Cornell Medicine — Stem Cell Research</strong><br>
+            Research on myeloid stem cells and immune–nervous system interactions
+            using molecular biology and immunology techniques.
+          </li>
+
+          <li>
+            <strong>NeurIPS 2024 Machine Learning Paper</strong><br>
+            Co-authored and designed predictive models for a machine learning
+            research paper submitted to the NeurIPS 2024 conference.
+          </li>
+
+          <li>
+            <strong>A High Schooler’s Guide to Physics</strong><br>
+            231-page self-published book simplifying high school physics through
+            clear explanations, diagrams, and practice problems.
+            Reached #1 Amazon Best-Seller in Mechanics.
+          </li>
+
+          <li>
+            <strong>Wearable Technology for Locked-In Syndrome</strong><br>
+            Research project through NYU STEP focused on assistive wearable
+            technology; presented at the Statewide STEP Conference (3rd place).
+          </li>
+
+          <li>
+            <strong>Physics Olympiad Program — Founder & President</strong><br>
+            Founded and led a 150+ student team preparing for national competitions
+            such as F=MA and USAPhO.
+          </li>
+
+          <li>
+            <strong>Windows 95-Style Personal Website</strong><br>
+            Interactive retro desktop website built using HTML, CSS, and JavaScript.
+          </li>
+        </ul>
+      </div>
+
+      <div class="resizer"></div>
+    </div>
+
+    <!-- Contact Window -->
+    <div class="window" id="contactWindow">
+      <div class="window-titlebar">
+        <span>Contact</span>
+        <div class="window-buttons">
+          <button class="minimize">_</button>
+          <button class="maximize">☐</button>
+          <button class="close">X</button>
+        </div>
+      </div>
+
+      <div class="window-content" id="contactContent">
+        <p>
+          <strong>Email:</strong><br>
+          <a href="mailto:rafi.uddin67@myhunter.cuny.edu">
+            rafi.uddin67@myhunter.cuny.edu
+          </a>
+        </p>
+
+        <p>
+          <strong>Phone:</strong><br>
+          929-599-8735
+        </p>
+
+        <p>
+          <strong>LinkedIn:</strong><br>
+          <a href="https://www.linkedin.com/in/rafi-uddin-b2a1bb263/" target="_blank">
+            linkedin.com/in/rafi-uddin-b2a1bb263
+          </a>
+        </p>
+
+        <p>
+          <strong>Location:</strong><br>
+          Queens, New York
+        </p>
+      </div>
+
+      <div class="resizer"></div>
+    </div>
+
+    <!-- Taskbar -->
+    <div class="taskbar">
+      <div class="start-button" id="startButton">
+        <img src="icons/start.png" alt="Start" class="start-icon">
+        Start
+      </div>
+      <div class="taskbar-windows" id="taskbarWindows"></div>
+      <div id="clock"></div>
+    </div>
+
+    <!-- Start Menu -->
+    <div class="start-menu" id="startMenu">
+      <ul>
+        <li>About Me</li>
+        <li>Projects</li>
+        <li>Contact</li>
+        <li>Restart</li>
+        <li>Shut Down</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
